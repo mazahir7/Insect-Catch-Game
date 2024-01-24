@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+
+
+:root {
+	--color-primary: hsl(212, 86%, 53%);
+	--color-white: #fff;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+*:focus,
+*:focus-visible {
+	outline: none;
+}
+
+*::selection {
+	background-color: transparent;
+}
+
+html {
+	/* changes the 1REM from 16px to 10px */
+	font-size: 62.5%;
+	overflow: hidden;
+}
+
+body {
+	font-family: "Press Start 2P", sans-serif;
+	height: 100vh;
+	text-align: center;
+	overflow: hidden;
+}
+
+h1 {
+	line-height: 6rem;
+}
+
+.screen {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	width: 100vw;
+	height: 100vh;
+	font-size: 1.8rem;
+
+	background-color: var(--color-primary);
+	color: var(--color-white);
+
+	transform: translateY(0%);
+	transition: all .8s linear;
+
+}
+
+.screen-container.play .screen {
+	transform: translateY(-100%);
+}
+
+.screen-container.playing .screen {
+	transform: translateY(-200%);
+}
+
+.btn {
+	background-color: var(--color-white);
+	font-family: inherit;
+	color: var(--color-primary);
+	border: none;
+	cursor: pointer;
+	padding: 1rem 2rem;
+	margin: 2rem
+}
+
+.btn:hover {
+	filter: brightness(140%);
+}
+
+.btn:active {
+	transform: scale(.98);
+}
+
+h3 {
+
+	line-height: 4rem;
+}
+
+.screen-2 .images {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
+	margin-top: 3rem;
+}
+
+.screen-2 .images .img {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 1.2rem;
+	border: 2px solid var(--color-white);
+	padding: 1rem;
+	width: 12rem;
+	height: 12rem;
+	border-radius: 2px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.screen-2 .images .img:hover {
+	background-color: var(--color-white);
+	color: var(--color-primary);
+}
+
+.screen-2 .images .img:active {
+	transform: scale(.98);
+}
+
+.screen-2 .images img {
+	width: 8rem;
+	aspect-ratio: 1;
+}
+
+.screen-3 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.game-states {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem;
+}
+
+.playground {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	backdrop-filter: brightness(200%);
+}
+
+.playground img {
+	position: absolute;
+	width: 7rem;
+	aspect-ratio: 1;
+	cursor: pointer;
+	z-index: 9999;
+}
+
+.message {
+	position: absolute;
+	top: -50%;
+	left: 0;
+	right: 0;
+	text-align: center;
+	line-height: 2.5rem;
+	font-size: 1.6rem;
+	background-color: rgba(0, 0, 0, .6);
+	color: var(--color-white);
+	transition: all 1s ease;
+}
+
+.message.active {
+	top: 12%;
+}
+
+
+@media (max-width:38em) {
+	.screen {
+		font-size: 1.2rem;
+	}
+
+	.screen-2 .images {
+		flex-wrap: wrap;
+		gap: 2rem;
+	}
+
+	h3 {
+		font-size: 1.2rem;
+		line-height: 3rem;
+	}
+
+	.message {
+		font-size: 1.2rem;
+	}
+}
+
+@media (max-width:19em) {
+	.screen {
+		font-size: 1.2rem;
+	}
+
+	.screen-2 .images {
+		flex-wrap: wrap;
+		gap: .5rem;
+	}
+
+	.screen-2 .images .img {
+		font-size: 1.2rem;
+		padding: .5rem;
+		width: 12rem;
+		height: 8rem;
+	}
+
+	.screen-2 .images img {
+		width: 6rem;
+		aspect-ratio: 1;
+	}
+
+	.message {
+		font-size: 1.2rem;
+	}
+}

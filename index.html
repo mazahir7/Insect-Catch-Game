@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insect Catch Game</title>
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="screen-container">
+    <div class="screen screen-1">
+      <h1>Catch The Insect</h1>
+
+      <button id="play" class="btn">Play Game</button>
+    </div>
+
+    <div class="screen screen-2">
+      <h3>What is your "favorite" insect?</h3>
+
+      <div class="images">
+        <div class="img">
+          <span>Fly</span>
+          <img src="http://pngimg.com/uploads/fly/fly_PNG3946.png" alt="fly">
+        </div>
+
+        <div class="img">
+          <span>Mosquito</span>
+          <img src="http://pngimg.com/uploads/mosquito/mosquito_PNG18175.png" alt="mosquito" />
+        </div>
+
+        <div class="img">
+          <span>Spider</span>
+          <img src="http://pngimg.com/uploads/spider/spider_PNG12.png" alt="spider" />
+        </div>
+
+        <div class="img">
+          <span>Roach</span>
+          <img src="http://pngimg.com/uploads/roach/roach_PNG12163.png" alt="roach" />
+        </div>
+      </div>
+
+    </div>
+
+    <div class="screen screen-3">
+      <div class="game-states">
+        <p>Time: <span class="timer">00:00</span></p>
+        <p>Score: <span class="score">00</span></p>
+      </div>
+
+      <div class="playground" id="playground">
+        <!-- <img src="http://pngimg.com/uploads/fly/fly_PNG3946.png" alt="fly"> -->
+      </div>
+    </div>
+
+  </div>
+  <p class="message">Are you annoyed yet?<br>You are playing an impossible game!!!</p>
+  <script src="script.js"></script>
+</body>
+
+</html>
